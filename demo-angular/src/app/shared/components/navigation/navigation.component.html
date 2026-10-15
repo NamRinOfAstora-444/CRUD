@@ -1,0 +1,15 @@
+<div class="navigation-wrapper">
+  <p-menubar [model]="items()">
+    <ng-template pTemplate="start">
+      <div class="brand">
+        <i class="pi pi-users" style="font-size: 1.5rem; color: var(--primary-color)"></i>
+        <span class="brand-text">Quản lý người dùng</span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div class="breadcrumb-wrapper">
+        <p-breadcrumb [model]="breadcrumbs()" [home]="home()" styleClass="custom-breadcrumb" />
+      </div>
+    </ng-template>
+  </p-menubar>
+</div>

@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyen Van A",
+      "email": "a@gmail.com",
+      "role": "Admin",
+      "status": "ACTIVE",
+      "updatedAt": "2026-06-04T14:30:00"
+    },
+    {
+      "id": 2,
+      "name": "Tran Van B",
+      "email": "b@gmail.com",
+      "role": "User",
+      "status": "INACTIVE",
+      "updatedAt": "2026-06-04T15:00:00"
+    },
+    {
+      "id": 3,
+      "name": "Le Van C",
+      "email": "c@gmail.com",
+      "role": "Manager",
+      "status": "ACTIVE",
+      "updatedAt": "2026-06-04T16:30:00"
+    },
+    {
+      "id": 4,
+      "name": "Pham Van D",
+      "email": "d@gmail.com",
+      "role": "User",
+      "status": "ACTIVE",
+      "updatedAt": "2026-06-05T08:15:00"
+    },
+    {
+      "id": 5,
+      "name": "Hoang Van E",
+      "email": "e@gmail.com",
+      "role": "Admin",
+      "status": "INACTIVE",
+      "updatedAt": "2026-06-05T09:45:00"
+    },
+    {
+      "id": 6,
+      "name": "Do Van F",
+      "email": "f@gmail.com",
+      "role": "Manager",
+      "status": "ACTIVE",
+      "updatedAt": "2026-06-05T10:30:00"
+    },
+    {
+      "id": 7,
+      "name": "Bui Van G",
+      "email": "g@gmail.com",
+      "role": "User",
+      "status": "ACTIVE",
+      "updatedAt": "2026-06-05T11:20:00"
+    },
+    {
+      "id": 8,
+      "name": "Dang Van H",
+      "email": "h@gmail.com",
+      "role": "Manager",
+      "status": "INACTIVE",
+      "updatedAt": "2026-06-05T13:00:00"
+    },
+    {
+      "id": 9,
+      "name": "Vu Van I",
+      "email": "i@gmail.com",
+      "role": "Admin",
+      "status": "ACTIVE",
+      "updatedAt": "2026-06-05T14:10:00"
+    },
+    {
+      "id": 10,
+      "name": "Ngo Van J",
+      "email": "j@gmail.com",
+      "role": "User",
+      "status": "INACTIVE",
+      "updatedAt": "2026-06-05T15:25:00"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

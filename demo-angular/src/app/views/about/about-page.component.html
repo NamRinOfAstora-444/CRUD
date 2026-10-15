@@ -1,0 +1,96 @@
+<div class="about-page">
+  <h1>Tạo tài khoản</h1>
+
+  <form class="form">
+    <div class="form-field">
+      <label for="name">Tên:</label>
+      <div class="input-wrapper">
+        <input
+          pInputText
+          id="name"
+          [ngModel]="formData().name"
+          (ngModelChange)="updateFormField('name', $event)"
+          name="name"
+          [class.p-invalid]="errors().name"
+          placeholder="Nhập tên"
+        />
+        @if (errors().name) {
+          <small class="error-text">{{ errors().name }}</small>
+        }
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="email">Email:</label>
+      <div class="input-wrapper">
+        <input
+          pInputText
+          id="email"
+          [ngModel]="formData().email"
+          (ngModelChange)="updateFormField('email', $event)"
+          name="email"
+          [class.p-invalid]="errors().email"
+          placeholder="Nhập email"
+        />
+        @if (errors().email) {
+          <small class="error-text">{{ errors().email }}</small>
+        }
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="role">Vai trò:</label>
+      <div class="input-wrapper">
+        <p-select
+          id="role"
+          [ngModel]="formData().role"
+          (ngModelChange)="updateFormField('role', $event)"
+          name="role"
+          [options]="roleOptions"
+          optionLabel="label"
+          optionValue="value"
+          [class.p-invalid]="errors().role"
+          placeholder="Chọn vai trò"
+        />
+        @if (errors().role) {
+          <small class="error-text">{{ errors().role }}</small>
+        }
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="status">Trạng thái:</label>
+      <div class="input-wrapper">
+        <p-select
+          id="status"
+          [ngModel]="formData().status"
+          (ngModelChange)="updateFormField('status', $event)"
+          name="status"
+          [options]="statusOptions"
+          optionLabel="label"
+          optionValue="value"
+          [class.p-invalid]="errors().status"
+          placeholder="Chọn trạng thái"
+        />
+        @if (errors().status) {
+          <small class="error-text">{{ errors().status }}</small>
+        }
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <p-button
+        type="submit"
+        label="Tạo tài khoản"
+        [raised]="true"
+      />
+      <p-button
+        type="button"
+        label="Hủy"
+        severity="secondary"
+        [raised]="true"
+        (onClick)="handleCancel()"
+      />
+    </div>
+  </form>
+</div>

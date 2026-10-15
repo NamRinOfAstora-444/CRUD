@@ -1,0 +1,56 @@
+.about-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-field {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.form-field label {
+  padding-top: 0.75rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.input-wrapper input,
+.input-wrapper p-dropdown {
+  width: 100%;
+}
+
+.error-text {
+  color: #e24c4c;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  padding-left: 150px;
+}

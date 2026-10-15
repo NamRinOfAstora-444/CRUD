@@ -1,0 +1,40 @@
+<p-table
+  [value]="data()"
+  [loading]="loading()"
+  [paginator]="true"
+  [rows]="rowsPerPage()"
+  [first]="first()"
+  [rowsPerPageOptions]="[5, 10, 20, 50]"
+  [totalRecords]="totalRecords()"
+  [lazy]="true"
+  (onLazyLoad)="onLazyLoad($event)"
+  [stripedRows]="true"
+  [showGridlines]="true"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      @for (col of columns(); track col.field) {
+        <th [pSortableColumn]="col.field">
+          {{ col.header }}
+          <p-sortIcon [field]="col.field"></p-sortIcon>
+        </th>
+      }
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-rowData>
+    <tr>
+      @for (col of columns(); track col.field) {
+        <td>
+          @if (getColumnTemplate(col.field); as template) {
+            <ng-container
+              *ngTemplateOutlet="template; context: { $implicit: rowData }"
+            ></ng-container>
+          } @else {
+            {{ rowData[col.field] }}
+          }
+        </td>
+      }
+    </tr>
+  </ng-template>
+</p-table>

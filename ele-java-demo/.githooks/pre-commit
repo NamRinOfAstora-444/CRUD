@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+
+echo "🔍 [pre-commit] Running tests..."
+./mvnw test
+echo "✅ Tests passed"
+
+echo "📦 [pre-commit] Running build..."
+./mvnw package -DskipTests
+echo "✅ Build passed"
+
+echo "☕ [pre-commit] Running spotless (Java format)..."
+./mvnw spotless:apply -q
+git add -A
+echo "✅ Spotless passed"
+
+echo "💅 [pre-commit] Running prettier..."
+if command -v prettier >/dev/null 2>&1; then
+  prettier --write .
+  git add -A
+  echo "✅ Prettier passed"
+else
+  echo "⚠️  prettier not found, skipping"
+fi
+
+echo "🚀 All checks passed. Proceeding with commit."
